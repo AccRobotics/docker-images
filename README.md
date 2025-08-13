@@ -1,6 +1,8 @@
-# Docker images (and automations)
+# Docker images
 
 This repository contains Dockerfiles and build automation for images used in AccRobotics projects. Images are built and published to the GitHub Container Registry (GHCR) for easy reuse across the organization.
+
+👉 **[View all AccRobotics packages on GHCR](https://github.com/orgs/AccRobotics/packages)**
 
 ## Images
 
