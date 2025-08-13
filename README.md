@@ -10,12 +10,31 @@ This repository contains Dockerfiles and build automation for images used in Acc
 
 ## Usage
 
+### Pulling from GHCR
+
 You can pull any published image using Docker:
 
 ```sh
 docker pull ghcr.io/accrobotics/isaaclab:latest
 ```
 
-## Automation
+### Building and Pushing Locally
 
-GitHub Actions workflows automatically build and push images to GHCR on every push to `main`.
+To build the image locally:
+
+```sh
+./build_and_push.sh
+```
+
+To build and push the image to GHCR (requires Docker login):
+
+```sh
+./build_and_push.sh --push
+```
+
+You must be logged in to GHCR with Docker to push:
+
+```sh
+echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+```
+Where `CR_PAT` is a GitHub personal access token with `write:packages` scope.
